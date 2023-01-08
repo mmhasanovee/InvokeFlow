@@ -1,0 +1,22 @@
+<template>
+    <template if:true={isFireFlow}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01"
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close"
+                    onclick={destroyFlow}>
+                    <lightning-icon icon-name="utility:close" alternative-text="Close Modal" variant="inverse"
+                        size="small">
+                    </lightning-icon>
+                </button>
+                <div class="slds-modal__header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate" tabindex="-1">{flowModalLabel}</h1>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-flow onstatuschange={onFlowStatusChange} flow-api-name={flowAPI} flow-input-variables={flowInputs}> </lightning-flow>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

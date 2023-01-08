@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>56.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>ScreenFlow: Fire From LWC {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>ScreenFlow: Fire From LWC</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Initial_Screen</name>
+        <label>Initial Screen</label>
+        <locationX>176</locationX>
+        <locationY>158</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Record_ID_is</name>
+            <dataType>String</dataType>
+            <defaultValue>
+                <elementReference>recordId</elementReference>
+            </defaultValue>
+            <fieldText>Record ID is&quot;</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>CatList</name>
+            <fieldText>&lt;p&gt;{!ListOfCats}&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Initial_Screen</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>ListOfCats</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

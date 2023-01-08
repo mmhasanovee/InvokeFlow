@@ -1,0 +1,6 @@
+<template>
+    <lightning-button variant="brand" label="Fire Flow~" title="Primary action" onclick={onBtnClick}
+        class="slds-m-left_x-small"></lightning-button>
+    <c-flow-invocation is-fire-flow={isFireFlow} list-of-cats={catList} current-record-id={recordId} flow-a-p-i={flowAPI}
+        flow-modal-label={flowLabel} ondestroyflow={destroyFlowModal}></c-flow-invocation>
+</template>

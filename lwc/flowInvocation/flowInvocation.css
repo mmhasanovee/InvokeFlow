@@ -1,0 +1,4 @@
+/* import and use to remove the shadow */
+.slds-spinner_container {
+    position: unset;
+}
