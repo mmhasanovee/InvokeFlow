@@ -1,6 +1,6 @@
 import { api, LightningElement } from 'lwc';
 
-export default class RspInvokeFlow extends LightningElement {
+export default class flowInvocation extends LightningElement {
 
     @api currentRecordId;
     @api listOfCats;
